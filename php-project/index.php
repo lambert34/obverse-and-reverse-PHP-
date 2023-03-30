@@ -22,6 +22,11 @@ public function __construct(Player $p)
     $this->player2 = $player2;
 }
 
+public function start()
+{
+    
+}
+
 $game = new Game(
     new Player("Alex", 100),
     new Player("Alice", 100)
