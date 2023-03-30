@@ -1,5 +1,16 @@
 <?php
 
+class Player {
+    public $name;
+    public $coins;
+
+    public function __construct($name, $coins)
+    {
+        $this->name = $name;
+        $this->coins = $coins;
+    }
+}
+
 class Game {
     protected $player1;
     protected $player1;
