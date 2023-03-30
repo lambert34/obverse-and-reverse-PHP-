@@ -24,6 +24,7 @@ public function __construct(Player $p)
 
 public function start()
 {
+    
     // Подбросить монету
     $flip = rand(0, 1) ? "орел" : "решка";
 
@@ -41,11 +42,17 @@ public function start()
 // Если число монет у любого игрока достигнет 0, то игра окончена.
 
 if($this->player1->coins == 0 || $this->player2->coins ==0) {
-    $this->end();
+    return $this->end();
+}
 }
 
-// Побеждает тот, у кого больше монет.
+public function end()
+{
+    echo <<<EOT
+    Game over!
+    EOT;
 }
+
 
 $game = new Game(
     new Player("Alex", 100),
