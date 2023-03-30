@@ -47,8 +47,18 @@ if($this->player1->coins == 0 || $this->player2->coins ==0) {
 }
 }
 
+public function winner()
+{
+    if($this->player1->coins > $this->player2->coins) {
+        return $this->player1;
+    } else {
+        return $this->player2;
+    }
+}
+
 public function end()
 {
+    // Победитель тот, у кого больше монет
     echo <<<EOT
     Game over!
     EOT;
