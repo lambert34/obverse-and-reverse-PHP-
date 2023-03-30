@@ -24,7 +24,22 @@ public function __construct(Player $p)
 
 public function start()
 {
-    
+    // Подбросить монету
+    $flip = rand(0, 1) ? "орел" : "решка";
+
+//     Если орел, игрок1 получает монету, игрок2 теряет,
+
+    if($flip == "орел") {
+        $this->player1->coins++;
+        $this->player2->coins--;
+    } else {
+        $this->player1->coins--;
+        $this->player2->coins++;
+    }
+
+// Если решка, то игрок1 теряет монету, игрок2 получает,
+// Если число монет у любого игрока достигнет 0, то игра окончена.
+// Побеждает тот, у кого больше монет.
 }
 
 $game = new Game(
