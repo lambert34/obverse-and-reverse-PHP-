@@ -24,7 +24,7 @@ public function __construct(Player $p)
 
 public function start()
 {
-    
+    while(true) {
     // Подбросить монету
     $flip = rand(0, 1) ? "орел" : "решка";
 
@@ -43,6 +43,7 @@ public function start()
 
 if($this->player1->coins == 0 || $this->player2->coins ==0) {
     return $this->end();
+}
 }
 }
 
