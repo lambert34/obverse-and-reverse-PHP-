@@ -7,7 +7,8 @@ class Game {
 
 public function __construct(Player $p)
 {
-    
+    $this->player1 = $player1;
+    $this->player2 = $player2;
 }
 
 $game = new Game(
